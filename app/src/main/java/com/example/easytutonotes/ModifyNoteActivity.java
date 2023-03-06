@@ -116,10 +116,11 @@ public class ModifyNoteActivity extends AppCompatActivity {
                 String title = titleInput.getText().toString();
                 String description = descriptionInput.getText().toString();
 
-                Note note = new Note(title,description,selectedDate,status);
+                Note not = new Note(note.getId(),title,description,selectedDate,status);
 
                 DbNotes db = new DbNotes(ModifyNoteActivity.this);
-                db.updateNote(note);
+                db.updateNote(not);
+
 
                 finish();
 

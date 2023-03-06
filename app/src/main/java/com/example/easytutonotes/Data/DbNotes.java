@@ -4,10 +4,12 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 import com.example.easytutonotes.Model.Note;
+import com.example.easytutonotes.ModifyNoteActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,21 +73,26 @@ public class DbNotes extends DataBase {
 
     }
 
-   public void  updateNote(Note note){
+   public int   updateNote(Note note){
+       int result=0;
        try{
            DataBase db = new DataBase(context);
            SQLiteDatabase sql = db.getWritableDatabase();
 
            ContentValues values = new ContentValues();
-           values.put("id",note.getId());
            values.put("title", note.getTitle());
            values.put("description", note.getDescription());
            values.put("createdTime", note.getCreatedTime());
            values.put("status", note.getStatus());
 
-           sql.insert(tableName,null,values);
+          String id = ""+ note.getId();
+
+           result=sql.update(tableName,values, "id = ?",new String[] { id });
+
+
        }catch (Exception ex){
            ex.toString();
        }
+       return  result;
     }
 }
