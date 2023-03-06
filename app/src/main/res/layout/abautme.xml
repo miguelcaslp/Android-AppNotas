@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#162EC5"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".AbautMe">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="282dp"
+        android:layout_height="240dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="20dp"
+        android:text="Hola soy Miguel Ángel Castro y esta es mi aplicación de notas hecha en android, la idea de esta aplicación es un crud de notas con una base de datos."
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="260dp"
+        android:layout_height="301dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_profile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home"
+        android:layout_width="139dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="31dp"
+        android:backgroundTint="@color/white"
+        android:text="Home"
+        android:textColor="#162EC5" />
+
+</RelativeLayout>

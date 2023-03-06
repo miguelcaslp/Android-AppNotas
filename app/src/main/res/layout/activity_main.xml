@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#162EC5"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/notestitle"
+        android:layout_width="89dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="153dp"
+        android:text="Notas"
+        android:textColor="@color/white"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        android:layout_above="@id/addBoton"
+        android:layout_below="@id/notestitle"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addBoton"
+        android:layout_width="139dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="19dp"
+        android:backgroundTint="@color/white"
+        android:text="Crear Nota"
+        android:textColor="#162EC5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/abautBoton"
+        android:layout_width="139dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="19dp"
+        android:layout_toEndOf="@+id/addBoton"
+        android:backgroundTint="@color/white"
+        android:text="Sobre Mi"
+        android:textColor="#162EC5" />
+
+
+</RelativeLayout>
